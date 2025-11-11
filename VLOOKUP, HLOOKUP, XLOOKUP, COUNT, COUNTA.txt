@@ -1,0 +1,67 @@
+3. VLOOKUP, HLOOKUP, XLOOKUP, COUNT, COUNTA
+
+VLookup Function in Excel:
+ This stands for the vertical lookup that is responsible for looking for a particular value in the leftmost column of a table. It then returns a value in the same row from a column you specify.
+ Syntax: VLOOKUP( lookup_value, table_array, col_index_num,[range_lookup]
+ lookup_value - This is the value that you have to look for in the first column of a table.
+ table - This indicates the table from which the value is retrieved.
+ col_index - The column in the table from the value is to be retrieved. The Count Of first Column is always 1.
+ range_lookup - [optional] to find an Exact match enter False To find an appropriate match enter True.
+ TRUE = approximate match (default). FALSE = exact match.
+
+1. Now use VlookUp to find Orders of a Specific Employee Based on their name.
+ =VLOOKUP(A2;A1:E8;3)
+ =VlookUp (“Agatha”;A1:H22;6)
+
+Hlookup Function in Excel:
+ HLOOKUP in Excel stands for ‘Horizontal Lookup’. It is a function that makes Excel search for a certain value in a row (the so called ‘table array’), in order to return a value from a different row in the same column.
+Syntax: HLOOKUP([value], [range], [row number], [false or true])
+ The value you want to look up;
+ The range in which you want to find the value and the return value;
+ The number of the row within your defined range, that contains the return value;
+ 0 or FALSE for an exact match with the value your are looking for; 1 or TRUE for an approximate match.
+
+2. Hlookup Function is used to find out Department of a Specific Employee based on their name.
+
+XLOOKUP Function in Excel:
+The XLOOKUP function searches a range or an array, and then returns the item corresponding to the first match it finds. If no match exists, then XLOOKUP can return the closest (approximate) match.
+Syntax: =XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])
+ lookup_value = The value to be searched
+ lookup_array =The array or range of cells to search for values
+ return_array= The array or range of Sales from which a corresponding Value to be returned, based on the position of value in the look_up array.
+[if_not_found]  Where a valid match is not found, return the [if_not_found] text you 
+                supply.
+Optional        If a valid match is not found, and [if_not_found] is missing, #N/A is 
+                returned.
+[match_mode]    Specify the match type:
+
+Optional       0 - Exact match. If none found, return #N/A. This is the default.
+              -1 - Exact match. If none found, return the next smaller item.
+              1 - Exact match. If none found, return the next larger item.
+              2 - A wildcard match where *, ?, and ~ have special meaning.
+
+2. Use Xlookup to find the ORDER ID of an particular product based on their
+product name for vertical table
+=XLOOKUP (“Orange”, B2:B6, A2:A6)
+
+3. Use Xlookup to find the Unit Price of a product based on their order id in
+Horizontal Table.
+=XLOOKUP(“105,B1:F1,B3:F3)
+
+COUNT Explanation:
+ The COUNT function is generally used to count a range of cells containing numbers or dates excluding blanks.
+Syntax: COUNT (value1, [value2], ...)
+ The COUNT function syntax has the following arguments:
+ Value1 Required. The first item, cell reference, or range within which you want to count numbers.
+ Value2, ... Optional. Up to 255 additional items, cell references, or ranges within which you want to count numbers.
+ =COUNT(B2:B14)
+
+CountA Function in Excel:
+ The COUNTA function counts the number of cells that are not empty in a range.
+Syntax: COUNTA(value1, [value2], ...)
+The COUNTA function syntax has the following arguments:
+ value1 Required. The first argument representing the values that you want to count.
+ value2, ... Optional. Additional arguments representing the values that you want tocount, up to a maximum of 255 arguments.
+ The COUNTA function counts cells containing any type of information, including error values and empty text (""). For example, if the range contains a formula that returns an empty string, the COUNTA function counts that value.
+The COUNTA function does not count empty cells.
+ =COUNTA(B2:B14)
