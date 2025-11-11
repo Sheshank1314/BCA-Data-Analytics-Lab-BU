@@ -1,0 +1,60 @@
+1. CONDITIONAL FORMATTING, IF, COUNTIF, SUMIF, AVERAGE, CONCAT using Excel Formulas.
+
+1. Apply conditional formatting to highlight employees with high salary greater than 50,000.
+2. Use the IF function to categorize employees into "High Performers" or "Average Performers" based on their sales.
+3. Use COUNTIF, SUMIF, and AVERAGE to calculate statistics like no of employees working in each department and sum of their salaries and average of their Salaries, average Salary of total employees.
+4. Create a new column using CONCAT to combine the employee's name and department.
+
+Conditional formatting rule:
+Conditional formatting is used to change the appearance of cells in a range based on yourspecified conditions.
+
+IF Function:
+The IF function is a premade function in Excel, which returns values based on true or false condition. It is typed =IF and has 3 parts:
+Syntax: =IF(logical test, [value_if_true], [value_if_false])
+
+COUNTIF Function:
+The COUNTIF function is a predefined function in Excel, which counts cells as
+specified. It is typed =COUNTIF
+
+SUMIF Function:
+The SUMIF function is a predefined function in Excel, which calculates the sum of values in a rangebased on condition. It is typed =SUMIF:
+Syntax: =SUMIF (range, criteria, [sum range])
+The condition is referred to as criteria, which can check things like: >, <, >=, <=,==, !=
+
+AVERAGE Function:
+The AVERAGE function is a premade function in Excel, which calculates the average (arithmetic mean).It is typed =AVERAGE
+It adds the range and divides it by the number of observations.
+
+CONCAT Function:
+To concatenate is to link something together.
+CONCAT is a function in Excel and is short for concatenate.
+The CONCAT function is used to link multiple cells without adding any
+delimiters between the combined cell values.
+It is typed =CONCAT(cell1, delimiter, cell2)
+
+Example of delimiters:
+comma, semicolon ; quotes " or ' braces {} pipes | slashes / \
+
+1) Conditional formatting rule:
+Conditional formatting is used to change the appearance of cells in a range based on yourspecified conditions.
+
+1. Apply conditional formatting to highlight employees with high salary greater than 50,000.
+HomeTab -> Conditional Formatting -> Highlight All -> Greater than -> option -> Enter the value -> Click Ok. (Salary > 50,000).
+
+2. Use the IF function to categorize employees into "High Performers" or "Average Performers" based on their sales.
+=IF(E2>50000;"HIGH Performers";"Average_performers")
+
+3. Use COUNTIF, SUMIF, and AVERAGE to calculate statistics like no of employees working in each department and sum of their salaries, average Salary of total employees.
+
+Enter all the department names in a separate column called Details. Sales, Marketing, Finance, HR.
+To count the number of employees working in each department.
+1. To calculate the total number of employees in each department.
+=COUNTIF (D$2:D$22;F$2:F$8)
+2. To calculate the sum of Salaries in Department wise.
+=SUMIF (D$2:D$22;F$2:F$8;E$2:E$22)
+3. To calculate the average Salary in all department.
+ =AVERAGE (E2:E22)
+4. Calculate the average salaries in each department.
+=AVERAGEIF (D$2:D$22;F2;E$2:E$22)
+5. Create a new column using CONCAT to combine the employee's name and SALARY
+=CONCATENATE (A2;"---"; E2)
