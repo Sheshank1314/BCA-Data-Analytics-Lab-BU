@@ -1,0 +1,111 @@
+2. INDEX, MATCH, UNIQUE, IFS, COUNTIFS, SUMIFS, AVERAGEIFS
+
+1. Calculate Value at the intersection of the 2nd row and 2nd column in the range,
+A3:D12 & Value at the intersection of the 3rd row and 4th column in the range,
+A3:D12 &use Index and match function to retrieve the sales of the specific employee based upon their name.
+2. Match function is used to find out Order value is present in the table or not.
+3. Using Ifs Statement to Categorize the Sales Performance.
+4. Use Unique function to create the List Unique regions.
+5. Use COUNTIFS, SUMIFS, AverageIFS, functions to calculate statistics based on multiple Criteria, such as region, orders (>=50), sales.
+
+INDEX:
+The INDEX function returns a value or the reference to a value from within a table or range.
+Syntax: INDEX (array, row_num, [column_num])
+The array form of the INDEX function has the following arguments:
+ Array Required. A range of cells or an array constant.
+ If array contains only one row or column, the corresponding row_num or column_num argument is optional.
+ If array has more than one row and more than one column, and only row_num or column_num is used, INDEX returns an array of the entire row or column in array.
+ row_num Required, unless column_num is present. Selects the row in array from which to return a value. If row_num is omitted, column_num is required.
+ column_num Optional. Selects the column in array from which to return a value. If column_num is omitted, row_num is required.
+
+1. Calculate Value at the intersection of the 2nd row and 2nd column in the range,
+A3:D12 & Value at the intersection of the 3rd row and 4th column in the range,
+A3:D12 &use Index and match function to retrieve the sales of the specific employee based upon their name.
+ =INDEX(A3:D12;2;2)
+ =INDEX(A3:D12;3;4)
+ =INDEX(D3:D12;MATCH("Lana";A3:A12;0))
+
+MATCH function:
+The MATCH function searches for a specified item in a range of cells, and then returns the relative position of that item in the range.
+Syntax: MATCH (lookup_value, lookup_array, [match_type])
+ lookup_value Required. The value that you want to match in lookup_array.
+ lookup_array Required. The range of cells being searched.
+ match_type Optional. The number -1, 0, or 1.
+
+Match_type   DESCRIPTION
+1 or omitted MATCH finds the largest value that is less than or equal to lookup_value.
+             The values in the lookup_array argument must be placed in ascending order, for 
+             example: ...-2, -1, 0, 1, 2, ..., A-Z, FALSE, TRUE.
+0            MATCH finds the first value that is exactly equal to lookup_value. The values 
+             in the lookup_array argument can be in any order.
+-1           MATCH finds the smallest value that is greater than or equal to lookup_value.
+             The values in the lookup_array argument must be placed in descending order, 
+             for example:TRUE, FALSE, Z-A, ...2, 1, 0, -1, -2, ..., and so on.
+
+
+2. Match is used to find out Order value is present in the table or not
+ =MATCH(99;C3:C12;1)
+ =MATCH(140;C3:C12;0)
+ =MATCH(33000;D3:D12;-1)
+
+IFS Function:
+ Use the IFS function to check whether one or more conditions are met and
+returns a value that corresponds to the first TRUE condition.
+ IFS can take the place of multiple nestedIF statements, and is much easier
+to read with multiple conditions.
+Syntax: = IFS(logical_test1, Value1 [logical_test2, Value2] …, [logical_test127, Value127])
+
+3. Using Ifs Statement to Categorize the Sales Performance
+=IFS (C3>90, "A", C3>80, "B", C3>70, "C",C3>60, "D")
+
+UNIQUE:
+The UNIQUE function returns a list of unique values in a list or range.
+Syntax: =UNIQUE(array,[by_col],[exactly_once])
+ Array (required) - the range or array from which to return unique values.
+ By_col (optional) - a logical value indicating how to compare data:
+  o TRUE - compares data across columns.
+  o FALSE or omitted (default) - compares data across rows.
+ Exactly_once (optional) - a logical value that defines what values are considered
+unique:
+  o TRUE - returns values that occur only once, which is the database notion
+of unique.
+  o FALSE or omitted (default) - returns all distinct (different) values in the
+range or array.
+
+4. Use Unique function to create the List Unique regions
+=UNIQUE(B3:B12)
+=unique(B3:D4,false) /* Compress data across rows*/
+=unique(C9:D9,True) /* Compress data across Columns*
+
+COUNTIFS:
+ The COUNTIFS function is a premade function in Excel, which counts cells in a range based on one or more true or false condition.
+Syntax: =COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2], ...)
+ The criteria_range1, criteria_range2, and so on, are the ranges where the function check for the conditions.
+ If a number is greater than another number >
+ If a number is smaller than another number <
+ If a number or text is equal to something =
+
+SUMIFS Function :
+ The SUMIFS function is a premade function in Excel, which calculates the sum of a range based on one or more true or false condition.
+ It is typed =SUMIFS:
+Syntax: =SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2, criteria2] ...)
+ The criteria_range1, criteria_range2, and so on, are the ranges where the function check for the conditions.
+ If a number is greater than another number >
+ If a number is smaller than another number <
+ If a number or text is equal to something =
+ The [sum_range] is the range where the function calculates the sum.
+
+AVERAGEIFS Function:
+The AVERAGEIFS function is a premade function in Excel, which calculates the average of a range based on one or more true or false condition. It is typed =AVERAGEIFS:
+Syntax: =AVERAGEIFS (average_range, criteria_range1, criteria1, ...)
+The criteria_range1, criteria_range2, and so on, are the ranges where the function check for the conditions.
+ If a number is greater than another number >
+ If a number is smaller than another number <
+ If a number or text is equal to something =
+The average_range is the range where the function calculates the average.
+
+5. Use COUNTIFS, SUMIFS, AverageIFS, functions to calculate statistics based on
+multiple Criteria, such as region, orders (>=50), sales.
+ =COUNTIFS(B$3:B$10;E3;C$3:C$10;F3)
+ =SUMIFS(D$3:D$10;B$3:B$10;E3;C$3:C$10;F3
+ =AVERAGEIFS(D$3:D$23;B$3:B$23;E3;C$3:C$23;F3)
