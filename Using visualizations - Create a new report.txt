@@ -1,0 +1,33 @@
+1. Create a New Report:
+• Open Microsoft Power BI Desktop.
+• Click on "File" > "New"
+• Import your data into Power BI by connecting to a data source
+
+
+2. Create and Arrange Visualizations:
+• Select the appropriate type of visualization (e.g., bar chart, line chart, pie chart) from the visualizations pane on the right-hand side.
+• Drag and drop fields from your dataset onto the visual to create different visualizations like bar charts, line graphs, etc.
+• Arrange the visualizations by clicking and dragging them to desired locations on the canvas.
+
+
+3. Format a Visualization:
+• Click on a visualization to select it.
+• Use the "Format" or "Visualizations" pane to modify the appearance, colors, labels, and
+other settings of the selected visualization.
+
+
+4.Use text, map, and gauge visualizations and save a report:
+• Include a text visualization by selecting "card" from the "visualizations" pane and drag and drop fields from your dataset onto the visual.
+• Add a map visualization using the map visual from the visualization pane and dragging a geographical field onto the visual.
+• Include a gauge visualization by selecting "Gauge" from the "Visualizations" pane and configuring it with appropriate data.
+• Click on "File" > "Save" to save the report in your desired location and format
+
+
+5. Use a Slicer to Filter Visualizations:
+• Select “Slicer (new)” from the Visualization pane and drag a field you want to use as a filter into the slicer visual.
+• Use the slicer to interactively filter the other visualizations on the report by selecting specific values.
+
+
+6. Sort, Copy, and Paste Visualizations:
+• To sort visualizations, select a visualization and use the sort options available in the "Format" or "Visualizations" pane.
+• To copy and paste visualizations, select the visualization, right-click, and choose "Copy." Then, right-click on the canvas and select "Paste."
