@@ -1,0 +1,30 @@
+1. Modify and Print a Report:
+To modify a report in Power BI, you can edit existing visuals, add new visuals, change formatting, and adjust data connections.
+• Open your report in Power BI Desktop or Power BI Service.
+• Make the necessary modifications to the visuals by editing their properties, formatting, or data.
+• To print the report, click on "File" and then select "Print" to configure the printing settings and print the report.
+
+
+2. Rename and Delete Report Pages:
+• In Power BI Desktop or Service, navigate to the report page.
+• To rename a report page, right-click on the page name in the Pages pane, select "Rename," and enter the new name.
+• To delete a report page, right-click on the page name in the Pages pane and select "Delete."
+
+
+3. Add a Filter to a Page or Report:
+• In Power BI Desktop, select the page or visual you want to apply the filter to.
+• Go to the "Filters" pane and click on "Add a filter."
+• Choose the field you want to use as a filter and configure its settings (e.g., filter type, values).
+
+
+4. Set Visualization Interactions:
+• Click on the visual you want to set interactions for.
+• Go to the "Format" pane (or right-click and select "Format") and navigate to the "Edit interactions" option.
+• Adjust the interactions between visuals by selecting the interaction type (e.g., highlighting, filtering) for each visual.
+
+
+5. Send a Report to PowerPoint:
+• In Power BI Service, open the report you want to export.
+• Click on "File" and select "Export" > "PowerPoint (.pptx)."
+• Configure the export settings and click "Export" to generate the PowerPoint file with the report
+visuals.
