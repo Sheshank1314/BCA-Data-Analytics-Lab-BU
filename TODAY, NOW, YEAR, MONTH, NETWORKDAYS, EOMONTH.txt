@@ -1,0 +1,69 @@
+TODAY Function:
+➤ The TODAY function returns the serial number of the current date in Excel. The TODAY function updates automatically whenever the worksheet is opened, or when the formulas are manually recalculated.
+
+Syntax:
+➤ The TODAY function has no arguments.
+➤ The format is: = TODAY()
+
+
+NOW Function:
+➤ The NOW function in Excel returns the serial number ofthe current date and time. The NOW function is considered 'volatile', meaning that it updates automatically whenever the worksheet is opened, or when the formulas are manually recalculated.
+
+Syntax:
+➤ The NOW function has no arguments.
+➤ The format is: =NOW()
+➤ And ADD days to current date by using =NOW()+7
+
+
+YEAR Function:
+➤ The YEAR function returns the year corresponding to a date. This can be useful for
+isolating the year element of a date.
+
+Syntax:
+➤ The syntax of the YEAR function is: =YEAR(Serial_number)
+➤ Serial_number is the Excel-assigned number of the date you want to query. The serial
+number is usually obtained as the result of another Excel function, such as TODAY, DATE,
+DATEVALUE, etc.
+
+
+MONTH Function:
+➤ The MONTH function returns the nth month of the year ranging from 1 to 12. This can be useful for isolating the month element of a date. Or Returns the month of the year a specific date falls in, in numeric format.
+
+Syntax:
+➤ The syntax of the MONTH function is: =MONTH (Serial_number)
+➤ Serial_number is the Excel-assigned number of the date you want to query. The serial number is usually obtained as the result of another Excel function, such as TODAY, DATE, DATEVALUE, etc.
+Note: Month And Year do in google sheet:
+
+
+NETWORKDAYS Function:
+➤ NETWORKDAYS is used to determine the number of working days between two dates. The formula calculates the days in an inclusive manner, meaning that the start and end days are included in the count, and Saturdays and Sundays are automatically excluded from the calculation. Additional or ad hoc days may also be excluded using an optional argument.
+
+Syntax:
+➤ The syntax of the NETWORKDAYS function is: =NETWORKDAYS (start_date, end_date, [holidays])
+• Start_date is a date that represents the start date.
+• End_date is a date that represents the end date.
+• Holidays is an optional argument. It can refer to a range of dates to be excluded from the working days calculation. Alternatively, holidays may be explicitly listed within the formula using an array of date serial numbers.
+The basic application of NETWORKDAYS is shown below:
+1. =NETWORKDAYS (13-1-2023;31-1-2023;A8:A10) # no of working days b/w 13/01/23 to 31/1/23 and 15/01/23 and 26/01/23 are holidays as a non working days.
+2. =NETWORKDAYS(D9;E9) # no of working days b/w 1/12/23 to 31/12/23.
+3. =NETWORKDAYS(D9;E9;A13) # no ofworking days b/w 1/12/23 to 31/12/23 and 25/12/23 is holiday as Non working day.
+
+
+EOMONTH FUNCTION:
+➤ The EOMONTH function determines the last day of an earlier or later month than the month being referenced.
+➤ The EOMONTH function may be used to determine maturity, expiry, or due dates when we want to force these to fall on the last day of the month.
+➤ This function returns the serial number of the calculated date, which can then be formatted using the date format of choice.
+
+Syntax:
+➤ The syntax of the EOMONTH function is: =EOMONTH(start_date,months)
+• Start date will be used as the reference date.
+• Months is the number of months to be calculated before or after the start_date.
+➤ =EOMONTH(A13;36)
+• In the above example, the investment is set to mature on the last date of the month,
+three years from the investment date.
+➤ =EOMONTH(A14;0.9)
+• If a number other than an integer is entered in months, EOMONTH truncates the
+decimal and uses the whole number value only (see below).
+➤ =EOMONTH(A18;-1)
+• Months can also be entered as a negative value, which will result in subtracting that
+number of months from the start date, as shown below.
