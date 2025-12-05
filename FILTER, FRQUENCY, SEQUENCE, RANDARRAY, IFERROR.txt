@@ -1,0 +1,115 @@
+FILTER function:
+➤ The FILTER function allows you to filter a range of data based on criteria you define.
+➤ The FILTER function filters an array based on a Boolean (True/False) array.
+Syntax:
+=FILTER(array,include,[if_empty])
+array (Required) The array, or range to filter
+include (Required) A Boolean array whose height or width is the same as the array
+[if_empty] (Optional) The value to return if all values in the included array are empty (filter returns nothing)
+
+Step1: In home tab click data in data dropdown select data validation.
+Step2: Now data validation rules window will be open, once it opened add the rule and Click Done.
+Step 3: Now use the filter function to filter the given data by using data validation.
+Formula:
+=filter (A2:D22,C2:C22=E1)
+By using above formula it can filter the data by respective departments.
+
+FREQUENCY function :
+➤ The FREQUENCY function calculates how often values occur within a range of values, and then returns a vertical array of numbers. For example, use FREQUENCY to count the number of test scores that fall within ranges of scores. Because FREQUENCY returns an array, it must be entered as an array formula.
+Syntax :
+FREQUENCY(data_array, bins_array)
+The FREQUENCY function syntax has the following arguments:
+ data_array (Required). An array of or reference to a set of values for which you want to count frequencies. If data_array contains no values, FREQUENCY returns an array of zeros.
+ bins_array (Required). An array of or reference to intervals into which you want to group the values in data_array. If bins_array contains no values, FREQUENCY returns the number of elements in data_array.
+
+SEQUENCE Function:
+➤ The SEQUENCE function allows you to generate a list of sequential numbers in an array, such as 1, 2, 3, 4.
+➤ In the following example, we created an array that's 4 rows tall by 5 columns wide with =SEQUENCE (4,5).
+Syntax:
+=SEQUENCE(rows,[columns],[start],[step])
+rows (Required). The number of rows to return
+[columns] (Optional). The number of columns to return
+[start] (Optional). The first number in the sequence
+[step] (Optional). The amount to increment each subsequent value in the array
+Formula: 
+1. =SEQUENCE(4,5)
+2. =SEQUENCE(6,3)
+3. =SEQUENCE(2,3,3,2)
+
+
+RANDARRAY function :
+➤ The RANDARRAY function returns an array of random numbers. You can specify the number of rows and columns to fill, minimum and maximum values, and whether to return whole numbers or decimal values.
+Syntax :
+=RANDARRAY([rows],[columns],[min],[max],[whole_number])
+[rows] (Optional). The number of rows to be returned
+[columns] (Optional). The number of columns to be returned
+[min] (Optional). The minimum number you would like returned
+[max] (Optional). The maximum number you would like returned
+[whole_number] (Optional). Return a whole number or a decimal value
+                            TRUE for a whole number
+                            FALSE for a decimal number.
+➤ The RANDARRAY function takes five arguments, none of which are required: rows, columns, min, max, and integer. By default, rows, columns, and max default to 1, while min defaults to zero and integer defaults to FALSE. Without any arguments, RANDARRAY will return a decimal value between 0 and 1:
+Note: In Google sheet randarray () supports only two arguments. But in excel
+version 2021 and Microsoft 365 supports 5 arguments.
+Formula:
+RANDARRAY() // returns number like 0.098419132
+2. Use rows and columns to control the number of values returned:
+=RANDARRAY(5,1) // 5 random values in rows
+=RANDARRAY(1,5) // 5 random values in columns
+
+IFERROR function:
+➤ You can use the IFERROR function to trap and handle errors in a formula. IFERROR returns a value you specify if a formula evaluates to an error; otherwise, it returns the result of the formula.
+Syntax :
+=IFERROR(value, value_if_error)
+ value (Required). The argument that is checked for an error.
+ value_if_error (Required). The value to return if the formula evaluates to an error. The following error types are evaluated: #N/A, #VALUE!, #REF!, #DIV/0!, #NUM!, #NAME?, or #NULL!.
+Remarks :
+ If value or value_if_error is an empty cell, IFERROR treats it as an empty string value ("").
+ If value is an array formula, IFERROR returns an array of results for each cell in the range specified in value. See the second example below.
+
+Quota                          Units Sold
+210                            35
+55                             0
+23
+
+Formula                        Description                                 Result
+=IFERROR(A2/B2, "Error         Checks for an error in the first            6
+in calculation")               argument (divide 210 by 35), finds                   
+                               no error, and then returns the         
+                               results of the formula
+=IFERROR(A3/B3, "Error         Checks for an error in the                  Error in
+in calculation")               formula in the first argument               calculation
+                               (divide 55 by 0), finds a
+                               division by 0 error, and then
+                               returns value_if_error
+=IFERROR(A4/B4, "Error         Checks for an error in the                  0
+in calculation")               formula in the first argument
+                               (divide "" by 23), finds no error,
+                               and then returns the results
+                               of the formula.   
+
+Formula :
+=IFERROR(A2/B2)
+=IFERROR(A3/B3,"Value in error")
+=IFERROR(A4/B4)
+
+Example 2:
+Quota            Units Sold                                               Ratio
+210              35                                                       6
+55               0                                                        Error in
+                                                                          calculation
+                 23                                                       0
+
+Formula          Description                                              Result
+=C2              Checks for an error in the formula in the first          6
+                 argument in the first element of the array (A2/B2 
+                 or divide 210 by 35), finds no error, and then 
+                 returns the result of the formula
+=C3              Checks for an error in the formula in the first          Error in
+                 argument in the second element of the array (A3/B3       calculation
+                 or divide 55 by 0), finds a division by 0 error, and 
+                 then returns value_if_error
+=C4              Checks for an error in the formula in the first          0
+                 argument in the third element of the array (A4/B4 or 
+                 divide "" by 23), finds no error, and then returns the
+                 result of the formula
