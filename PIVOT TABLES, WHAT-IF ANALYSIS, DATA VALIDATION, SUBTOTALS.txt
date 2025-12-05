@@ -1,0 +1,38 @@
+PIVOT TABLES:
+ A PivotTable is a powerful tool to calculate, summarize, and analyze data that lets you see comparisons, patterns, and trends in your data. PivotTables work a little bit differently depending on what platform you are using to run Excel.
+Step 1: Enter the below data in Google Sheet.
+Step 2: Go to insert tab and Click on Pivot Table then it displays the dialogue box.
+Step 3: select the rows and columns and Values.
+
+WHAT-IF ANALYSIS:
+ In what-if analysis, various situations or “scenarios” are contemplated through the manipulation of variables. Among others, there are two very popular types of what-if analysis: scenario and sensitivity analysis.
+ In sensitivity analysis, the focus is on the effects of changes to one specific variable; this type of analysis explains how variables (dependent) are affected based on changes made in another variable (independent).
+ In scenario analysis, the focus is on the effects of changes to multiple variables; here, the different scenarios correspond to these changing variables. For example, a worstcase scenario could involve higher-than-average costs and minimum sales.
+
+How to Use Goal Seek in Google Sheets:
+Install the Goal Seek Add-on in Google Sheets
+ Follow the steps below to find and install Goal Seek in Google Sheets.
+• Open Google Sheets and go to Extension > Add-ons > Get add-ons.
+• You will see the Goal Seek sidebar on the left of your spreadsheet, including “Settings”, “Solve Status”, and “History”.
+• Click on the cell containing the profit formula, then click on the grid icon beside “Set Cell” in the sidebar. If you place your cursor over the grid icon, you will see the text “Capture selected cell”, as in the screenshot below.
+• Next, type in the “Target value” for the “Set Cell”. Here, “20000”.
+• Click on the cell containing the value you want Goal Seek to change, then click on the grid icon beside “By Changing Cell” in the sidebar. Here, the selling price for Scenario 1, cell B14.
+• To change the number of iterations, the tolerance, and/or the time limit, click on “Options”. Here, I will use the default values.
+• Once everything is ready, click “Solve.” With the default options used above, it will take a maximum of two minutes to calculate the solution. If Goal Seek cannot find a solution, try increasing the tolerance or the time limit and number of iterations.
+
+How to use Data Validation in Google Sheets:
+ Go to the “Data” tab, click “Data Validation”, and get a dialog box on the right side of the sheet.
+ Click “+ Add rule”.
+ Select a range where you want to make Data Validation effective.
+ Choose one of the criteria and input values according to the criterion.
+ Check the advanced option of “Show help text for a selected cell”, if you want to leave a hint to an editor who makes an invalid data input to make it valid.
+ Choose one of two options* against invalid data input.
+ Click “Done” to make the setting effective.
+
+SUBTOTALS WITH RANGES:
+ You can automatically calculate subtotals and grand totals in a list for a column by using the Subtotal command.
+Step 1: Sort the data in descending order using sort option in Data tab. Sort on region data.
+Step 2: Click on subtotal option from data tab→ select region in at each value change field.
+Step 3: Use function → Select sum.
+Step 4: Add subtotal to→ Select Sum.
+Step 5: You will get subtotal region wise.
